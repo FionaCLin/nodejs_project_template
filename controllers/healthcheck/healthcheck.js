@@ -1,4 +1,12 @@
-export default async function healthCheck (req, res, next) {
-    res.send (`Request URL:000 ${req.originalUrl}`)
- }
- 
+import {healthcheck as healthcheckLibrary} from '../../lib/healthcheck/index.js';
+
+export default async function healthcheck(request, response, next) {
+  try {
+    const {query = '', originalUrl} = request;
+    const responseString = await healthcheckLibrary({query});
+
+    response.json(`Request URL: ${originalUrl} ${responseString}`);
+  } catch (error) {
+    next(error);
+  }
+}
