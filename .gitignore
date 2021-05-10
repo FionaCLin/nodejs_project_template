@@ -5,3 +5,4 @@ package-lock.json
 bk
 config.js
 .jest-cache
+.jest-coverage
