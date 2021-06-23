@@ -6,3 +6,4 @@ bk
 config.js
 .jest-cache
 .jest-coverage
+*/junit.xml
