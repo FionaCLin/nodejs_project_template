@@ -11,7 +11,7 @@
     "start": "nodemon --exec yarn dev",
     "test": "jest",
     "eslint": "eslint ./",
-    "prettier": "prettier --write \"../*.js\" && eslint --fix \"./**\" ",
+    "prettier": "prettier --write \"./**/*.(json|js)\"",
     "unit": "NODE_ENV=test APP_ENV=local jest -i",
     "coverage": "yarn unit --ci --coverage"
   },
